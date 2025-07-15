@@ -80,6 +80,15 @@ operatorButtons.forEach(button =>{
 function evaluate(){
     secondOperand = displayValue; //new numbers typed after original display value is cleared after user types a operator button
     const result = operate(currentOperator, firstOperand, secondOperand);//call operate with operator and both operands
+
+    if (typeof result === "string") {//divide by zero
+        display.textContent = result;
+        displayValue = "0";
+        firstOperand = "";
+        currentOperator = null;
+        return;
+    }
+
     display.textContent = result;//display result
     displayValue = result.toString();
     firstOperand = result;//save result as new firstOperand for proper chaining logic
@@ -91,7 +100,7 @@ function evaluate(){
 //equals button click
 const equalsButton = document.querySelector("#equals");
 equalsButton.addEventListener("click", () => {
-    if (currentOperator === null || displayValue === "0"){
+    if (currentOperator === null || displayValue === ""){
         return; //do nothing if there's no valid operation to perform (ex. user clicks + before entering any number)
     }
     evaluate(); //otherwise, call evalaute() to compute the result;
@@ -100,7 +109,7 @@ equalsButton.addEventListener("click", () => {
 // clear button
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", () => {
-    //reset all rßelevant variables to default (see beginning of program)
+    //reset all relevant variables to default (see beginning of program)
     firstOperand = "";
     secondOperand = "";
     currentOperator = null;
