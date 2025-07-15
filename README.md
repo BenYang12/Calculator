@@ -1,6 +1,6 @@
 # Simple Calculator
 
-This is a basic web calculator built with HTML, CSS, and JavaScript. It performs simple arithmetic operations: addition, subtraction, multiplication, and division.
+Web calculator built with HTML, CSS, and JavaScript. It performs simple arithmetic operations: addition, subtraction, multiplication, and division.
 
 ## Features
 
@@ -13,7 +13,6 @@ This is a basic web calculator built with HTML, CSS, and JavaScript. It performs
 
 1. Open `index.html` in your browser.
 2. Click the number and operator buttons to perform calculations.
-3. Press `Clear` to reset the calculator.
 
 ## Files
 
@@ -22,5 +21,4 @@ This is a basic web calculator built with HTML, CSS, and JavaScript. It performs
 - `script.js` – Handles calculator logic
 
 ---
-Enjoy calculating!
 # Calculator
